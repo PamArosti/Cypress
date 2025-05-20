@@ -1,0 +1,25 @@
+{
+  "name": "cypress-cucumber",
+  "version": "^2.2.0",
+  "description": "Descrição do Projeto",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open --e2e",
+    "test-headless": "cypress run --spec cypress/e2e/features/*",
+    "run-tags": "cypress run --env tags=@mobile",
+    "videos-report": "cypress run --env allure=true",
+    "test:homolog": "cypress open --e2e --browser edge --config baseUrl=https://www.saucedemo.com --env environment=homolog",
+    "test:prod": "cypress open --e2e --browser edge baseUrl=https://www.saucedemo.com --env environment=prod"
+  },
+  "keywords": [
+    "cypress"
+  ],
+  "author": "Pamela Monteiro",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^22.0.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "@shelex/cypress-allure-plugin": "^2.34.0",
+    "cypress": "^13.1.0",
+    "esbuild": "^0.25.4"
+  }
+}
