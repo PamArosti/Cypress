@@ -41,7 +41,7 @@ Cypress_POC/
 
 1. Clone o repositório ou extraia o ZIP:
    ```bash
-   git clone [<url-do-repositório>](https://github.com/PamArosti/Cypress/tree/main)
+   git clone https://github.com/PamArosti/Cypress/
    cd Cypress_POC/Cypress-main
    npm install
 
