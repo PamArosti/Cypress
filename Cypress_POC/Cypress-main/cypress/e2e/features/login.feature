@@ -18,3 +18,15 @@ Feature: Página de Login Local
     When preencho o usuário com "teste" e a senha com "errada"
     And clico no botão de login
     Then a página deve exibir a mensagem "Usuário ou senha incorretos"
+
+  Scenario Outline: Tentativas de login com credenciais inválidas
+    When preencho o usuário com um dado errado "<usuario>" e a senha com "<senha>"
+    And clico no botão de login
+    Then a página deve exibir a mensagem "Usuário ou senha incorretos"
+
+    Examples:
+      | usuario | senha    | 
+      | teste   | errada   | 
+      | admin   |   000000 |
+      | guest   | senha123 |
+      | user    |   123456 |

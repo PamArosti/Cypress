@@ -30,6 +30,11 @@ class LoginPage {
   verifyErrorMessage(message) {
     cy.contains(message).should("be.visible");
   }
+
+  wrongUserAndPassword(username, password) {
+        this.elements.usernameInput().type(username);
+        this.elements.passwordInput().type(password);
+    }
 }
 
 export const loginPage = new LoginPage();

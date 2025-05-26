@@ -30,3 +30,7 @@ Then("a página deve exibir a mensagem {string}", (mensagem) => {
   cy.contains(mensagem).should("be.visible");
   cy.get("body").should("contain.text", mensagem);
 });
+
+When('preencho o usuário com um dado errado {string} e a senha com {string}', (usuario, senha) => {
+    loginPage.wrongUserAndPassword(usuario, senha);
+});
